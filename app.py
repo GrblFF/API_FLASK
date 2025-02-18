@@ -24,7 +24,7 @@ def add_user():
 
 @app.route('/view_posts')
 def view_posts():
-    return jsonify(posts)
+    return render_template('view_posts.html', posts=posts)
 
 @app.route('/add_post', methods=['GET', 'POST'])
 def add_post():
